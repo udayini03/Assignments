@@ -1,7 +1,7 @@
 /* p {
   background-color: green;
   color: white;
-} */
+} 
 
 p#wd-id-selector-1 {
   background-color: red;
@@ -18,4 +18,36 @@ p#wd-ai-id-selector {
 p#wd-id-selector-3 {
   background-color: pink;
   color: blue;
+}
+
+.wd-class-selector {
+  background-color: yellow;
+  color: blue;
+}
+
+.wd-ai-class-selector {
+  background-color: darkslategray;
+  color: gold;
+}
+
+.wd-my-class {
+  background-color: lavender;
+  color: darkred;
+}*/
+
+.wd-selector-1 .wd-selector-3 {
+  background-color: red;
+  color: white;
+}
+.wd-selector-2 > .wd-selector-3 > .wd-selector-4 {
+  background-color: yellow;
+  color: blue;
+}
+.wd-selector-1 .wd-ai-selector-5 {
+  background-color: orange;
+  color: black;
+}
+.wd-selector-3 .wd-selector-5 {
+  background-color: green;
+  color: white;
 }
