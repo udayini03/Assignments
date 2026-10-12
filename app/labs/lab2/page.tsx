@@ -1,5 +1,13 @@
 import './index.css';
-import ForegroundColors from './ForegroundColors';  
+import ForegroundColors from './ForegroundColors'; 
+import BackgroundColors from './BackgroundColors'; 
+import Borders from './Borders'; 
+import Padding from './Padding'; 
+import Margins from './Margins'; 
+import BoxModel from './BoxModel'; 
+import Corners from './Corners'; 
+import Display from './Display'; 
+import Dimensions from './Dimensions'; 
 
 export default function Lab2() {
   return (
@@ -96,6 +104,14 @@ export default function Lab2() {
         </p>
       </div>
       <ForegroundColors />
+      <BackgroundColors />
+      <Borders />
+      <Padding />
+      <Margins />
+      <BoxModel />  
+      <Corners />
+      <Dimensions />
+      <Display />
     </div>
 
     
