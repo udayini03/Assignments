@@ -1,0 +1,23 @@
+/* p {
+  background-color: green;
+  color: white;
+} */
+
+p#wd-id-selector-1 {
+  background-color: red;
+  color: white;
+}
+p#wd-id-selector-2 {
+  background-color: yellow;
+  color: black;
+}
+
+#wd-lab2 h2 {
+  background-color: navy;
+  color: white;
+}
+
+#wd-lab2 h3 {
+  background-color: pink;
+  color: navy;
+}
