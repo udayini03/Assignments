@@ -1,7 +1,17 @@
 /* p {
   background-color: green;
   color: white;
-} 
+} */
+
+#wd-lab2 h2 {
+  background-color: navy;
+  color: white;
+}
+
+#wd-lab2 h3 {
+  background-color: lightblue;
+  color: black;
+}
 
 p#wd-id-selector-1 {
   background-color: red;
@@ -33,7 +43,7 @@ p#wd-id-selector-3 {
 .wd-my-class {
   background-color: lavender;
   color: darkred;
-}*/
+}
 
 .wd-selector-1 .wd-selector-3 {
   background-color: red;
@@ -51,3 +61,31 @@ p#wd-id-selector-3 {
   background-color: green;
   color: white;
 }
+
+/* #wd-specificity-id {
+  color: blue;
+}
+.wd-specificity-class {
+  color: red;
+}
+mark {
+  color: green;
+} */
+
+/* Cascade sample: the id selector #wd-ai-cascade should win (red),
+   because id beats class (yellow) and tag (green). */
+/* p {
+  background-color: green;
+}
+.wd-ai-cascade {
+  background-color: yellow;
+}
+#wd-ai-cascade {
+  background-color: red;
+} */
+
+.wd-fg-color-black { color: black; }
+.wd-fg-color-white { color: white; }
+.wd-fg-color-blue { color: #7070ff; }
+.wd-fg-color-red { color: #ff7070; }
+.wd-fg-color-green { color: green; } 
