@@ -5,6 +5,14 @@ export default function Labs() {
     <div id="wd-labs">
       <h1>Labs</h1>
       <h2 id="wd-student-name">Venkata Sai Udayini Vedantham</h2>
+      <a
+        href="https://github.com/udayini03/Assignments"
+        id="wd-github"
+        target="_blank"
+        rel="noreferrer"
+      >
+        GitHub repository
+      </a>
       <ul>
         <li>
           <Link href="/labs/lab1" id="wd-lab1-link">Lab 1: HTML Examples</Link>

@@ -8,19 +8,39 @@ import BoxModel from './BoxModel';
 import Corners from './Corners'; 
 import Display from './Display'; 
 import Dimensions from './Dimensions'; 
+import Positions from './Positions'; 
+import Zindex from './Zindex';    
+import Float from './Float';     
+import GridLayout from './GridLayout';
+import Flex from './Flex';
+import MediaQueriesDemo from './MediaQueriesDemo';
+import ReactIconsSampler from './ReactIconsSampler';    
 
 export default function Lab2() {
   return (
-    <div>
-      <div id="wd-lab2">
-        <h2>Lab 2 - Cascading Style Sheets</h2>
-        <h3>Styling with the STYLE attribute</h3>
-        <p>
-          Style attribute allows configuring look and feel right on the
-          element. Although it&apos;s very convenient it is considered bad
-          practice and you should avoid using the style attribute
-        </p>
-      </div>
+    <div id="wd-lab2">
+      
+      <h2>Lab 2 - Cascading Style Sheets</h2>
+      <p>
+        <a href="/labs/lab2/tailwind">Open Tailwind CSS lab →</a>
+      </p>
+      <h3>Styling with the STYLE attribute</h3>
+      <p>
+        Style attribute allows configuring look and feel right on the
+        element. Although it&apos;s very convenient it is considered bad
+        practice and you should avoid using the style attribute
+      </p>
+      <p
+        id="wd-ai-style-attr"
+        style={{ backgroundColor: "purple", color: "white" }}
+      >
+        This sample paragraph uses the style attribute to set a purple
+        background and white text.
+      </p>
+      <p style={{ backgroundColor: "green", color: "yellow" }}>
+        Paragraph with green background and yellow text.
+      </p>
+
       <div id="wd-css-id-selectors">
         <h3>ID selectors</h3>
         <p id="wd-id-selector-1">
@@ -112,6 +132,13 @@ export default function Lab2() {
       <Corners />
       <Dimensions />
       <Display />
+      <Positions />
+      <Zindex />
+      <Float />
+      <GridLayout />
+      <Flex />
+      <MediaQueriesDemo />
+      <ReactIconsSampler />
     </div>
 
     
