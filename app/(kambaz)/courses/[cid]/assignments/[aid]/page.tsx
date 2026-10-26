@@ -1,4 +1,5 @@
 import Link from "next/link";
+import * as db from "../../../../database";
 
 const input =
   "w-full rounded border border-neutral-300 px-3 py-1.5 text-sm";
@@ -9,21 +10,25 @@ export default async function AssignmentEditor({
 }: {
   params: Promise<{ cid: string; aid: string }>;
 }) {
-  const { cid } = await params;
+  const { cid, aid } = await params;
+  const assignment = db.assignments.find((a) => a._id === aid);
   return (
     <div id="wd-assignments-editor" className="max-w-3xl">
       <div className="mb-4">
         <label htmlFor="wd-name" className={label}>
           Assignment Name
         </label>
-        <input id="wd-name" defaultValue="A1 - ENV + HTML" className={input} />
+        <input id="wd-name" defaultValue={assignment?.title ?? ""} className={input} />
+        <p id="wd-assignment-id" className="mt-1 text-sm text-neutral-600">
+          Assignment id: {aid}
+        </p>
       </div>
       <div className="mb-4">
         <textarea
           id="wd-description"
           rows={8}
           className={`${input} font-sans`}
-          defaultValue="The assignment is available online Submit a link to the landing page of your Web application running on Vercel. The landing page should include the following: Your full name and section, Links to each of the lab assignments, Link to the Kambaz application, Links to all relevant source code repositories. The Kambaz application should include a link to navigate back to the landing page."
+          defaultValue={assignment?.description ?? ""}
         />
       </div>
 
@@ -31,7 +36,7 @@ export default async function AssignmentEditor({
         <label htmlFor="wd-points" className="text-sm font-medium md:pt-1.5 md:text-right">
           Points
         </label>
-        <input id="wd-points" defaultValue={100} className={input} />
+        <input id="wd-points" defaultValue={assignment?.points ?? 100} className={input} />
 
         <label htmlFor="wd-group" className="text-sm font-medium md:pt-1.5 md:text-right">
           Assignment Group
@@ -85,13 +90,13 @@ export default async function AssignmentEditor({
           <label htmlFor="wd-due-date" className={label}>
             Due
           </label>
-          <input type="date" id="wd-due-date" defaultValue="2024-05-13" className={`${input} mb-3`} />
+          <input type="date" id="wd-due-date" defaultValue={assignment?.due} className={`${input} mb-3`} />
           <div className="grid grid-cols-2 gap-3">
             <div>
               <label htmlFor="wd-available-from" className={label}>
                 Available from
               </label>
-              <input type="date" id="wd-available-from" defaultValue="2024-05-06" className={input} />
+              <input type="date" id="wd-available-from" defaultValue={assignment?.available} className={input} />
             </div>
             <div>
               <label htmlFor="wd-available-until" className={label}>
