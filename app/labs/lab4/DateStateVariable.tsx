@@ -18,7 +18,6 @@ const input = "mb-2 block rounded border border-neutral-300 px-3 py-1.5";
 
 export default function DateStateVariable() {
   const [startDate, setStartDate] = useState(new Date(2026, 0, 15, 10, 30));
-  // My Fall 2026 semester wraps up after finals week
   const [endDate, setEndDate] = useState(new Date(2026, 11, 12, 17, 0));
   const [dueDate, setDueDate] = useState(new Date(2026, 0, 22, 10, 30));
   return (

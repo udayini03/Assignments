@@ -40,7 +40,6 @@ function Middle({
   );
 }
 
-// My extra layer: a messenger that just passes the note along, like a group chat forward
 function Messenger({
   count,
   setCount,

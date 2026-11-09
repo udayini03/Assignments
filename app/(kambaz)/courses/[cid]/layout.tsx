@@ -23,7 +23,6 @@ export default function CoursesLayout({
   const router = useRouter();
   const [showCourseNav, setShowCourseNav] = useState(true);
 
-  // A signed-in user can only open courses they are enrolled in
   const blocked =
     currentUser !== null && !isEnrolled(enrollments, currentUser._id, courseId);
   useEffect(() => {
