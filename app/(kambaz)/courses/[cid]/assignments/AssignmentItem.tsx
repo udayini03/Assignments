@@ -1,18 +1,19 @@
 import Link from "next/link";
-import { FaFileAlt } from "react-icons/fa";
+import { FaFileAlt, FaTrash } from "react-icons/fa";
 
 export default function AssignmentItem({
-  cid, aid, title, details,
+  cid, aid, title, details, onDelete,
 }: {
   cid: string;
   aid: string;
   title: string;
   details: string;
+  onDelete?: () => void;
 }) {
   return (
     <li className="wd-assignment-list-item mb-3 flex gap-3 border border-l-[3px] border-neutral-300 border-l-green-600 p-3">
       <FaFileAlt className="mt-1 shrink-0 text-xl text-green-700" />
-      <div>
+      <div className="flex-1">
         <Link
           href={`/courses/${cid}/assignments/${aid}`}
           className="wd-assignment-link font-semibold text-neutral-900 no-underline"
@@ -21,6 +22,17 @@ export default function AssignmentItem({
         </Link>
         <div className="mt-1 text-sm text-neutral-600">{details}</div>
       </div>
+      {onDelete && (
+        <button
+          type="button"
+          onClick={onDelete}
+          className="wd-delete-assignment self-center text-red-600"
+          title="Delete assignment"
+          aria-label={`Delete ${title}`}
+        >
+          <FaTrash />
+        </button>
+      )}
     </li>
   );
 }
